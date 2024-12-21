@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnwo3vjmbbqks"]
+
+[ext_resource type="PackedScene" uid="uid://clns6a7uwgb0w" path="res://Instances/TMP/monk.tscn" id="2_6rhk4"]
+[ext_resource type="Script" path="res://Scripts/player_base.gd" id="2_hj1mw"]
+[ext_resource type="Script" path="res://Scripts/status_gui.gd" id="3_w7r7l"]
+[ext_resource type="Theme" uid="uid://cpiar2ssrpb7h" path="res://Themes/theme_001.tres" id="4_3otej"]
+[ext_resource type="PackedScene" uid="uid://drmfanhedar0q" path="res://Instances/character_status.tscn" id="4_ivs6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tge70"]
+size = Vector2(32, 32)
+
+[node name="map_test" type="Node2D"]
+
+[node name="player_base" type="CharacterBody2D" parent="."]
+position = Vector2(568, 280)
+script = ExtResource("2_hj1mw")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="player_base"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_base"]
+shape = SubResource("RectangleShape2D_tge70")
+
+[node name="Monk" parent="." instance=ExtResource("2_6rhk4")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Status" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_w7r7l")
+
+[node name="Container" type="VBoxContainer" parent="CanvasLayer/Status"]
+custom_minimum_size = Vector2(256, 288)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_3otej")
+
+[node name="Viktor" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
+layout_mode = 2
+
+[node name="Maheus" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
+layout_mode = 2
+
+[node name="Barbosa" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
+layout_mode = 2
+
+[node name="Tavares" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
+layout_mode = 2
+
+[node name="LeftButton" type="Button" parent="CanvasLayer/Status"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 408.0
+offset_top = 312.0
+offset_right = 440.0
+offset_bottom = 344.0
+theme = ExtResource("4_3otej")
+text = "<"
+
+[node name="RightButton" type="Button" parent="CanvasLayer/Status"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 712.0
+offset_top = 312.0
+offset_right = 744.0
+offset_bottom = 344.0
+theme = ExtResource("4_3otej")
+text = ">"
+
+[connection signal="pressed" from="CanvasLayer/Status/LeftButton" to="CanvasLayer/Status" method="_on_left_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Status/RightButton" to="CanvasLayer/Status" method="_on_right_button_pressed"]

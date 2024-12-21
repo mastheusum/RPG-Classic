@@ -1,0 +1,159 @@
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://cpiar2ssrpb7h"]
+
+[ext_resource type="FontFile" uid="uid://bb33a1i3vyiik" path="res://Fonts/Roboto/Roboto-Bold.ttf" id="1_28hn6"]
+[ext_resource type="Texture2D" uid="uid://beyjhvoae0vob" path="res://Scripts/Resources/ButtonAtlasDisabled.tres" id="2_fn0ml"]
+[ext_resource type="FontFile" uid="uid://dc76hvq4pmvp0" path="res://Fonts/Roboto/Roboto-BoldItalic.ttf" id="2_lrj4t"]
+[ext_resource type="Texture2D" uid="uid://dr87bt110peal" path="res://Scripts/Resources/ButtonAtlasPressed.tres" id="3_sewbm"]
+[ext_resource type="FontFile" uid="uid://ckfcfn1qfcci4" path="res://Fonts/Roboto/Roboto-Italic.ttf" id="3_yxwws"]
+[ext_resource type="FontFile" uid="uid://crb0vvpeccdg5" path="res://Fonts/Roboto/Roboto-Black.ttf" id="4_cc12o"]
+[ext_resource type="Texture2D" uid="uid://cwxsni226r56q" path="res://Scripts/Resources/PanelAtlas.tres" id="4_x4oja"]
+[ext_resource type="FontFile" uid="uid://br6jxjocouox6" path="res://Fonts/Roboto/Roboto-Regular.ttf" id="5_b7mek"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vx1f4"]
+texture = ExtResource("2_fn0ml")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5kcgd"]
+texture = ExtResource("3_sewbm")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mgudc"]
+texture = ExtResource("3_sewbm")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kipl5"]
+texture = ExtResource("2_fn0ml")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_14clv"]
+texture = ExtResource("3_sewbm")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gxl5c"]
+texture = ExtResource("4_x4oja")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1whej"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jcxth"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[resource]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("4_cc12o")
+Button/styles/disabled = SubResource("StyleBoxTexture_vx1f4")
+Button/styles/focus = SubResource("StyleBoxTexture_5kcgd")
+Button/styles/hover = SubResource("StyleBoxTexture_mgudc")
+Button/styles/normal = SubResource("StyleBoxTexture_kipl5")
+Button/styles/pressed = SubResource("StyleBoxTexture_14clv")
+Panel/styles/panel = SubResource("StyleBoxTexture_gxl5c")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/selection_color = Color(0.1, 0.1, 1, 0.8)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/shadow_outline_size = 1
+RichTextLabel/constants/table_h_separation = 3
+RichTextLabel/constants/table_v_separation = 3
+RichTextLabel/constants/text_highlight_h_padding = 3
+RichTextLabel/constants/text_highlight_v_padding = 3
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/bold_italics_font_size = 16
+RichTextLabel/font_sizes/italics_font_size = 16
+RichTextLabel/font_sizes/mono_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/fonts/bold_font = ExtResource("1_28hn6")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_lrj4t")
+RichTextLabel/fonts/italics_font = ExtResource("3_yxwws")
+RichTextLabel/fonts/mono_font = ExtResource("4_cc12o")
+RichTextLabel/fonts/normal_font = ExtResource("5_b7mek")
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_1whej")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_jcxth")
