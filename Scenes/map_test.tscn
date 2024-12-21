@@ -1,13 +1,102 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnwo3vjmbbqks"]
+[gd_scene load_steps=16 format=3 uid="uid://bnwo3vjmbbqks"]
 
 [ext_resource type="PackedScene" uid="uid://clns6a7uwgb0w" path="res://Instances/TMP/monk.tscn" id="2_6rhk4"]
 [ext_resource type="Script" path="res://Scripts/player_base.gd" id="2_hj1mw"]
 [ext_resource type="Script" path="res://Scripts/status_gui.gd" id="3_w7r7l"]
 [ext_resource type="Theme" uid="uid://cpiar2ssrpb7h" path="res://Themes/theme_001.tres" id="4_3otej"]
 [ext_resource type="PackedScene" uid="uid://drmfanhedar0q" path="res://Instances/character_status.tscn" id="4_ivs6r"]
+[ext_resource type="Script" path="res://Scripts/Resources/character_attributes.gd" id="6_nw12f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tge70"]
 size = Vector2(32, 32)
+
+[sub_resource type="Resource" id="Resource_sieq6"]
+script = ExtResource("6_nw12f")
+character_name = "Monk (1)"
+level = 2
+strength = 1
+vitality = 1
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
+
+[sub_resource type="Resource" id="Resource_2a26m"]
+script = ExtResource("6_nw12f")
+character_name = "Monk (2)"
+level = 2
+strength = 1
+vitality = 1
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
+
+[sub_resource type="Resource" id="Resource_hw16e"]
+script = ExtResource("6_nw12f")
+character_name = "Monk (3)"
+level = 2
+strength = 1
+vitality = 1
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
+
+[sub_resource type="Resource" id="Resource_a4e1f"]
+script = ExtResource("6_nw12f")
+character_name = "Monk (4)"
+level = 2
+strength = 1
+vitality = 1
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
+
+[sub_resource type="Resource" id="Resource_vq37x"]
+script = ExtResource("6_nw12f")
+character_name = "Viktor"
+level = 1
+strength = 1
+vitality = 1
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
+
+[sub_resource type="Resource" id="Resource_w1osn"]
+script = ExtResource("6_nw12f")
+character_name = "Maheus"
+level = 1
+strength = 1
+vitality = 1
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
+
+[sub_resource type="Resource" id="Resource_ebume"]
+script = ExtResource("6_nw12f")
+character_name = "Barbosa"
+level = 1
+strength = 1
+vitality = 1
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
+
+[sub_resource type="Resource" id="Resource_r54uj"]
+script = ExtResource("6_nw12f")
+character_name = "Tavares"
+level = 1
+strength = 1
+vitality = 8
+agility = 1
+dexterity = 1
+intelligence = 1
+wisdom = 1
 
 [node name="map_test" type="Node2D"]
 
@@ -33,63 +122,69 @@ grow_vertical = 2
 shape = SubResource("RectangleShape2D_tge70")
 
 [node name="Monk" parent="." instance=ExtResource("2_6rhk4")]
+mobs = Array[ExtResource("6_nw12f")]([SubResource("Resource_sieq6"), SubResource("Resource_2a26m"), SubResource("Resource_hw16e"), SubResource("Resource_a4e1f")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Status" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 328.0
+offset_top = 134.0
+offset_right = -312.0
+offset_bottom = -226.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_w7r7l")
 
 [node name="Container" type="VBoxContainer" parent="CanvasLayer/Status"]
-custom_minimum_size = Vector2(256, 288)
+custom_minimum_size = Vector2(512, 288)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -128.0
-offset_right = 128.0
-offset_bottom = 128.0
+offset_left = -256.0
+offset_right = 256.0
+offset_bottom = 1164.0
 grow_horizontal = 2
-grow_vertical = 2
 theme = ExtResource("4_3otej")
 
 [node name="Viktor" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
 layout_mode = 2
+attributes = SubResource("Resource_vq37x")
 
 [node name="Maheus" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
 layout_mode = 2
+attributes = SubResource("Resource_w1osn")
 
 [node name="Barbosa" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
 layout_mode = 2
+attributes = SubResource("Resource_ebume")
 
 [node name="Tavares" parent="CanvasLayer/Status/Container" instance=ExtResource("4_ivs6r")]
 layout_mode = 2
+attributes = SubResource("Resource_r54uj")
 
 [node name="LeftButton" type="Button" parent="CanvasLayer/Status"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 408.0
-offset_top = 312.0
-offset_right = 440.0
-offset_bottom = 344.0
+offset_left = -40.0
+offset_top = 112.0
+offset_right = -8.0
+offset_bottom = 144.0
 theme = ExtResource("4_3otej")
 text = "<"
 
 [node name="RightButton" type="Button" parent="CanvasLayer/Status"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 712.0
-offset_top = 312.0
-offset_right = 744.0
-offset_bottom = 344.0
+offset_left = 520.0
+offset_top = 112.0
+offset_right = 552.0
+offset_bottom = 144.0
 theme = ExtResource("4_3otej")
 text = ">"
 

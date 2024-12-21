@@ -1,12 +1,12 @@
 [gd_resource type="Theme" load_steps=17 format=3 uid="uid://cpiar2ssrpb7h"]
 
 [ext_resource type="FontFile" uid="uid://bb33a1i3vyiik" path="res://Fonts/Roboto/Roboto-Bold.ttf" id="1_28hn6"]
-[ext_resource type="Texture2D" uid="uid://beyjhvoae0vob" path="res://Scripts/Resources/ButtonAtlasDisabled.tres" id="2_fn0ml"]
+[ext_resource type="Texture2D" uid="uid://beyjhvoae0vob" path="res://Resources/Sprites/ButtonAtlasDisabled.tres" id="2_fn0ml"]
 [ext_resource type="FontFile" uid="uid://dc76hvq4pmvp0" path="res://Fonts/Roboto/Roboto-BoldItalic.ttf" id="2_lrj4t"]
-[ext_resource type="Texture2D" uid="uid://dr87bt110peal" path="res://Scripts/Resources/ButtonAtlasPressed.tres" id="3_sewbm"]
+[ext_resource type="Texture2D" uid="uid://dr87bt110peal" path="res://Resources/Sprites/ButtonAtlasPressed.tres" id="3_sewbm"]
 [ext_resource type="FontFile" uid="uid://ckfcfn1qfcci4" path="res://Fonts/Roboto/Roboto-Italic.ttf" id="3_yxwws"]
 [ext_resource type="FontFile" uid="uid://crb0vvpeccdg5" path="res://Fonts/Roboto/Roboto-Black.ttf" id="4_cc12o"]
-[ext_resource type="Texture2D" uid="uid://cwxsni226r56q" path="res://Scripts/Resources/PanelAtlas.tres" id="4_x4oja"]
+[ext_resource type="Texture2D" uid="uid://cwxsni226r56q" path="res://Resources/Sprites/PanelAtlas.tres" id="4_x4oja"]
 [ext_resource type="FontFile" uid="uid://br6jxjocouox6" path="res://Fonts/Roboto/Roboto-Regular.ttf" id="5_b7mek"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vx1f4"]

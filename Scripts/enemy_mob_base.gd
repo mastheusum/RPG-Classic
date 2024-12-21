@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @export var max_life : int
+@export var mobs : Array[CharacterAttributes]
 var _life
 
 func _ready() -> void:
